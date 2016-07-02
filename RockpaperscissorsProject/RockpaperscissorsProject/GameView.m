@@ -14,6 +14,7 @@
 @property (weak, nonatomic)IBOutlet UIButton *paperButton;
 @property (weak, nonatomic)IBOutlet UIButton *scissorsButton;
 @property (strong, nonatomic)IBOutlet UILabel *serifLabel;
+@property (strong, nonatomic)IBOutlet UIImageView *enemyHandImage;
 
 @end
 
@@ -28,10 +29,14 @@
     }
     return self;
 }
+-(void)setHand:(int)handNo{
+    NSArray *imageArray = @[@"rock",@"paper",@"scissors"];
+    UIImage *handImage = [UIImage imageNamed:imageArray[handNo]];
+    _enemyHandImage.image = handImage;
+}
 
 -(void)setSerif:(NSString *)serif{
     _serifLabel.text = serif;
-    
     [self setNeedsUpdateConstraints];
 }
 

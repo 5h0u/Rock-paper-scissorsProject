@@ -21,4 +21,6 @@
 
 -(void)setSerif:(NSString *)serif;
 
+-(void)setHand:(int)handNo;
+
 @end
