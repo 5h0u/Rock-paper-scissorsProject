@@ -13,20 +13,26 @@
 @property (weak, nonatomic)IBOutlet UIButton *rockButton;
 @property (weak, nonatomic)IBOutlet UIButton *paperButton;
 @property (weak, nonatomic)IBOutlet UIButton *scissorsButton;
-@property (weak, nonatomic)IBOutlet UILabel *serifLabel;
+@property (strong, nonatomic)IBOutlet UILabel *serifLabel;
 
 @end
 
 @implementation GameView
 
--(id)initWithFrame:(CGRect)frame{
-    self = [super initWithFrame:frame];
+-(id)init{
+    self=[super init];
     if(self){
         [_rockButton addTarget:self action:@selector(pressRockButton) forControlEvents:UIControlEventTouchDown];
         [_paperButton addTarget:self action:@selector(pressPaperButton) forControlEvents:UIControlEventTouchDown];
         [_scissorsButton addTarget:self action:@selector(pressScissorsButton) forControlEvents:UIControlEventTouchDown];
     }
     return self;
+}
+
+-(void)setSerif:(NSString *)serif{
+    _serifLabel.text = serif;
+    
+    [self setNeedsUpdateConstraints];
 }
 
 -(void)pressRockButton{

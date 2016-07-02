@@ -19,4 +19,6 @@
 
 @property (weak, nonatomic)id<GameViewDelegate> delegate;
 
+-(void)setSerif:(NSString *)serif;
+
 @end
