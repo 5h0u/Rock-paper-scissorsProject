@@ -47,8 +47,43 @@
     return hand;
 }
 
+-(void)judge:(int)enemyHand player:(int)playerHand{
+    //あいこ
+    if(enemyHand == playerHand){
+      //あいこ処理
+        NSLog(@"あいこ");
+    }else{
+        //相手がパーの時
+        if(enemyHand == 0){
+            if(playerHand == 1){
+                //勝ち
+                NSLog(@"勝ち");
+            }else{ //player = 2
+                //負け
+                NSLog(@"負け");
+            }
+        }else if(enemyHand == 1){
+            if(playerHand == 2){
+                //勝ち
+                NSLog(@"勝ち");
+            }else{ //player = 0
+                //負け
+                NSLog(@"負け");
+            }
+        }else{
+            if(playerHand == 0){
+                //勝ち
+                NSLog(@"勝ち");
+            }else{ //player = 1
+                //負け
+                NSLog(@"負け");
+            }
+        }
+    }
+}
+
 -(void)pressButton:(int)buttonId{
-    
+    [self judge:[self enemyHand] player:buttonId];
 }
 
 @end
