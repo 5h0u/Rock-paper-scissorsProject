@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "GameView.h"
 
-@interface ViewController ()
+@interface ViewController ()<GameViewDelegate>
 
 @property (strong, nonatomic)GameView *gameView;
 
@@ -21,6 +21,7 @@
     [super viewDidLoad];
     UINib *nib = [UINib nibWithNibName:@"GameView" bundle:nil];
     _gameView = [nib instantiateWithOwner:self options:nil][0];
+    _gameView.delegate = self;
     [self.view addSubview:_gameView];
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -28,6 +29,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)pressButton:(int)buttonId{
+    
 }
 
 @end
