@@ -104,10 +104,10 @@
 			children = (
 				E28F3E621D23D4D500C95852 /* AppDelegate.h */,
 				E28F3E631D23D4D500C95852 /* AppDelegate.m */,
-				E28F3E651D23D4D500C95852 /* ViewController.h */,
 				E2BC07C31D280ACF006C8F4A /* GameView.h */,
 				E2BC07C41D280ACF006C8F4A /* GameView.m */,
 				E2BC07C61D280ADC006C8F4A /* GameView.xib */,
+				E28F3E651D23D4D500C95852 /* ViewController.h */,
 				E28F3E661D23D4D500C95852 /* ViewController.m */,
 				E28F3E6B1D23D4D500C95852 /* Assets.xcassets */,
 				E28F3E701D23D4D500C95852 /* Info.plist */,

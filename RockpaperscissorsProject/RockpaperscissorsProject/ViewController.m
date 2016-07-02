@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "GameView.h"
 
 @interface ViewController ()
+
+@property (strong, nonatomic)GameView *gameView;
 
 @end
 
@@ -16,6 +19,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UINib *nib = [UINib nibWithNibName:@"GameView" bundle:nil];
+    _gameView = [nib instantiateWithOwner:self options:nil][0];
+    [self.view addSubview:_gameView];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
