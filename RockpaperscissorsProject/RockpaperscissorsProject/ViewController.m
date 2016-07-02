@@ -33,17 +33,7 @@
 }
 -(int)enemyHand{
     int hand = (int)arc4random_uniform(1000)%3;
-    switch (hand) {
-        case 0:
-            [_gameView setSerif:@"グー"];
-            break;
-        case 1:
-            [_gameView setSerif:@"パー"];
-            break;
-        case 2:
-            [_gameView setSerif:@"チョキ"];
-            break;
-    }
+    [_gameView setHand:hand];
     return hand;
 }
 
@@ -51,32 +41,32 @@
     //あいこ
     if(enemyHand == playerHand){
       //あいこ処理
-        NSLog(@"あいこ");
+        [_gameView setSerif:@"あいこ"];
     }else{
         //相手がパーの時
         if(enemyHand == 0){
             if(playerHand == 1){
                 //勝ち
-                NSLog(@"勝ち");
+                [_gameView setSerif:@"あなたの勝ち"];
             }else{ //player = 2
                 //負け
-                NSLog(@"負け");
+                [_gameView setSerif:@"あなたの負け"];
             }
         }else if(enemyHand == 1){
             if(playerHand == 2){
                 //勝ち
-                NSLog(@"勝ち");
+                [_gameView setSerif:@"あなたの勝ち"];
             }else{ //player = 0
                 //負け
-                NSLog(@"負け");
+                [_gameView setSerif:@"あなたの負け"];
             }
         }else{
             if(playerHand == 0){
                 //勝ち
-                NSLog(@"勝ち");
+                [_gameView setSerif:@"あなたの勝ち"];
             }else{ //player = 1
                 //負け
-                NSLog(@"負け");
+                [_gameView setSerif:@"あなたの負け"];
             }
         }
     }

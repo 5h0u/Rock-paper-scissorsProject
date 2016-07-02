@@ -13,15 +13,15 @@
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68K-9y-Xok">
                     <rect key="frame" x="54" y="442" width="91" height="56"/>
-                    <state key="normal" image="Image"/>
+                    <state key="normal" image="rock"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSi-tB-G9N">
                     <rect key="frame" x="153" y="437" width="109" height="65"/>
-                    <state key="normal" image="Image-1"/>
+                    <state key="normal" image="scissors"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UiY-3V-alF">
                     <rect key="frame" x="270" y="440" width="96" height="60"/>
-                    <state key="normal" image="Image-2"/>
+                    <state key="normal" image="paper"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="じゃんけん・・・" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAO-a1-ubR">
                     <rect key="frame" x="16" y="369" width="398" height="21"/>
@@ -29,13 +29,14 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d8m-xN-6Sh">
-                    <rect key="frame" x="97" y="86" width="220" height="220"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="udV-fZ-cj6">
+                    <rect key="frame" x="87" y="52" width="240" height="240"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
             <connections>
+                <outlet property="enemyHandImage" destination="udV-fZ-cj6" id="D1j-jm-wlf"/>
                 <outlet property="paperButton" destination="UiY-3V-alF" id="zZW-vW-5lS"/>
                 <outlet property="rockButton" destination="68K-9y-Xok" id="HKW-QC-oGn"/>
                 <outlet property="scissorsButton" destination="bSi-tB-G9N" id="72p-4g-Sgo"/>
@@ -44,8 +45,8 @@
         </view>
     </objects>
     <resources>
-        <image name="Image" width="56" height="56"/>
-        <image name="Image-1" width="55" height="65"/>
-        <image name="Image-2" width="60" height="60"/>
+        <image name="paper" width="60" height="60"/>
+        <image name="rock" width="56" height="56"/>
+        <image name="scissors" width="55" height="65"/>
     </resources>
 </document>
