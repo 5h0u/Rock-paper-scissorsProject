@@ -31,6 +31,21 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+-(int)enemyHand{
+    int hand = (int)arc4random_uniform(1000)%3;
+    switch (hand) {
+        case 0:
+            [_gameView setSerif:@"グー"];
+            break;
+        case 1:
+            [_gameView setSerif:@"パー"];
+            break;
+        case 2:
+            [_gameView setSerif:@"チョキ"];
+            break;
+    }
+    return hand;
+}
 
 -(void)pressButton:(int)buttonId{
     
