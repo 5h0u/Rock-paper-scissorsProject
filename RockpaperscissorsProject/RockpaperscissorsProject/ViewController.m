@@ -22,6 +22,7 @@
     UINib *nib = [UINib nibWithNibName:@"GameView" bundle:nil];
     _gameView = [nib instantiateWithOwner:self options:nil][0];
     _gameView.delegate = self;
+    [_gameView init];
     [self.view addSubview:_gameView];
     // Do any additional setup after loading the view, typically from a nib.
 }
