@@ -30,15 +30,15 @@
 }
 
 -(void)pressRockButton{
-    
+    [self.delegate pressButton:0];
 }
 
 -(void)pressPaperButton{
-    
+    [self.delegate pressButton:1];
 }
 
 -(void)pressScissorsButton{
-    
+    [self.delegate pressButton:2];
 }
 
 /*

@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol GameViewDelegate <NSObject>
+
+-(void)pressButton:(int)buttonId;
+
+@end
+
 
 @interface GameView : UIView
 
-
+@property (weak, nonatomic)id<GameViewDelegate> delegate;
 
 @end
