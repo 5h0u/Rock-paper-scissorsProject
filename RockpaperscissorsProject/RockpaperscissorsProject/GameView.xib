@@ -32,6 +32,12 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <connections>
+                <outlet property="paperButton" destination="UiY-3V-alF" id="zZW-vW-5lS"/>
+                <outlet property="rockButton" destination="68K-9y-Xok" id="HKW-QC-oGn"/>
+                <outlet property="scissorsButton" destination="bSi-tB-G9N" id="72p-4g-Sgo"/>
+                <outlet property="serifLabel" destination="MAO-a1-ubR" id="0Es-iH-chi"/>
+            </connections>
         </view>
     </objects>
 </document>
